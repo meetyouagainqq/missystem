@@ -18,9 +18,24 @@ import java.util.List;
 public class ProductRecommendServiceImpl implements ProductRecommendService {
 
     @Override
-    public List<ProductRecommend> query() {
+    public List<ProductRecommend> dataForRel() {
+        return new ProductRecommendImpl().dataForRel();
+    }
 
-        return new ProductRecommendImpl().query();
+    @Override
+    public ProductRecommend getProductById(Integer pid) {
+        return new ProductRecommendImpl().getProductById(pid);
+    }
+
+    @Override
+    public Integer EditProduct(ProductRecommend editProd) {
+        return new ProductRecommendImpl().EditProduct(editProd);
+    }
+
+    @Override
+    public List<ProductRecommend> getAllProducts() {
+
+        return new ProductRecommendImpl().getAllProducts();
     }
 
     @Override
@@ -29,13 +44,25 @@ public class ProductRecommendServiceImpl implements ProductRecommendService {
     }
 
     @Override
-    public List<ProductRecommend> getAllProduct(Integer page, Integer pageSize) {
-        return new ProductRecommendImpl().getAllProduct(page,pageSize);
+    public List<ProductRecommend> getPaging(Integer page, Integer pageSize) {
+        return new ProductRecommendImpl().getPaging(page,pageSize);
     }
 
     @Override
-    public Long getAllProductNum() {
+    public Long getAllProductNum(String name) {
 
-        return new ProductRecommendImpl().getAllProductNum();
+        return new ProductRecommendImpl().getAllProductNum(name);
+    }
+
+    @Override
+//    获取已经审核的产品
+//            然后再判断这些产品中的推荐状态值为0的数据拼接到再添加到下拉列表展示
+    public List<ProductRecommend> getDropDownList() {
+        return new ProductRecommendImpl().getDropDownList();
+    }
+
+    @Override
+    public List<ProductRecommend> getProductByPName(Integer page,Integer pageSize, String name) {
+        return new ProductRecommendImpl().getProductByPName(page,pageSize,name);
     }
 }

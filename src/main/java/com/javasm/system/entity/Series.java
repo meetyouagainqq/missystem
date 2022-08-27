@@ -2,6 +2,8 @@ package com.javasm.system.entity;
 
 import lombok.*;
 
+import java.util.List;
+
 /**
  * @author: LinHai
  * @className: MySeries
@@ -16,9 +18,13 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 public class Series {
-     private Integer sid;
-     private String sname;
-     private String sename;
-     private String remittance;
+     private Integer sid;//产品系列id
+     private String sname;//产品中文名
+     private String sename;//产品英文名
+     private String remittance;//汇款信息概括
 
+
+     public Series(String sname) {
+          this.sname = sname;
+     }
 }

@@ -40,14 +40,6 @@ public class JDBCTest {
         System.out.println(user1);
     }
 
-//    @Test
-//    public void test1() {
-    //111
-    //123123、、、、、、、
-//        LoginService loginService = new LoginServiceImpl();
-//        String userMenuIds = loginService.getUserMenuId(9);
-//        System.out.println(userMenuIds);
-//    }
 
     @Test
     public void test2() {
@@ -117,14 +109,8 @@ public class JDBCTest {
         String authUserStr=null;
         System.out.println(userService.editUserAuthId(authUserStr, 1));
     }
-<<<<<<< .mine
-    @Test
-    public void test10() {
-        ProductBasicService basicService=new ProductBasicServiceImpl();
-        String basicName = basicService.getBasicName(1);
-        System.out.println(basicName);
-    }
-||||||| .r10825
+
+
     @Test
     public void test10() {
         ProductBasicService basicService=new ProductBasicServiceImpl();
@@ -135,8 +121,7 @@ public class JDBCTest {
         List<ProductType> productSelect = basicService.getProductSelect();
         System.out.println(gson.toJson(productSelect));
     }
-=======
->>>>>>> .r10960
+
 
 
 }

@@ -13,7 +13,27 @@ import java.util.List;
  * @since: jdk11
  */
 public interface ProductRecommendDao {
-    List<ProductRecommend> query();
+
+
+
+
+    //获取普通推荐的产品
+    List<ProductRecommend>dataForRel();
+
+
+
+    //根据id修改指定字段
+    Integer EditProduct( ProductRecommend editProd);
+
+      //模糊查询
+    List<ProductRecommend>getProductByPName( Integer page,Integer pageSize,String name);
+
+    //获取添加的下拉菜单
+    List<ProductRecommend>getDropDownList();
+
+
+    //菜单数据
+    List<ProductRecommend> getAllProducts();
 
 
 
@@ -21,8 +41,11 @@ public interface ProductRecommendDao {
      Integer addProd(ProductRecommend insertProd);
 
 //分页查询
-     List<ProductRecommend>getAllProduct(Integer page,Integer pageSize);
+     List<ProductRecommend>getPaging(Integer page,Integer pageSize);
 
 //总记录数
-    Long getAllProductNum();
+    Long getAllProductNum(String name);
+
+    //根据id 查询数据
+    ProductRecommend getProductById(Integer pid);
 }

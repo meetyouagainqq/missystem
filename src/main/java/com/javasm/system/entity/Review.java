@@ -20,6 +20,7 @@ public class Review implements Serializable {
     @JsonFormat(locale = "zh_CN", pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT")
     private String updateTime;
     private Integer status;
+    private Integer basicId;
 
     public Review(String pname, Integer status) {
         this.pname = pname;

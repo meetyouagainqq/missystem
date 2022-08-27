@@ -11,7 +11,11 @@ public enum ResponseEnum {
     NO_LOGIN(300,"没有登录，请先登录"),
     LOGOUT_SUCCESS(320,"退出成功"),
     NO_PERMISSION(330,"没有权限"),
-    UPLOAD_SUCCESS(340,"上传成功");
+    UPLOAD_SUCCESS(340,"上传成功"),
+    UPDATE_SUCCESS(490,"驳回成功"),
+    UPDATE_FAILED(520,"驳回失败"),
+    REVIEW_SUCCESS(530,"审核通过"),
+    REVIEW_FAILED(540,"审核失败");
     private Integer code;
     private String msg;
 

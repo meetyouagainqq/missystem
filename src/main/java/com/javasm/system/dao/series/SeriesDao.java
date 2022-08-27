@@ -2,6 +2,7 @@ package com.javasm.system.dao.series;
 
 import com.javasm.system.entity.Menu;
 import com.javasm.system.entity.Series;
+import com.javasm.system.entity.SeriesRemittance;
 
 import java.util.List;
 
@@ -14,11 +15,20 @@ import java.util.List;
  * @since: jdk11
  */
 public interface SeriesDao {
-     List<Series> getSeries(Integer page,Integer pageSize);
+     List<Series> getSeries(Integer page,Integer pageSize,Series querySeries);
 
      Integer addSeries(Series series);
 
-     Long getAllSeriesNum();
+     Long getAllSeriesNum(Series querySeries);
+
+     Integer editSeries(SeriesRemittance editSeries);
+
+     SeriesRemittance getSeriesById(Integer sid);
+
+     Integer editForSeries(Series editforSeries);
+
+
+
 
 
 }

@@ -1,7 +1,7 @@
 package com.javasm.system.entity.result;
 
 import com.javasm.system.entity.PageInfo;
-import com.javasm.system.entity.ProductRecommend;
+
 
 import java.util.List;
 
@@ -39,7 +39,7 @@ public class R {
         this.msg = msg;
     }
 
-    public Object getData(List<ProductRecommend> prod) {
+    public Object getData() {
         return data;
     }
 

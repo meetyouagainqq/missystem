@@ -114,13 +114,10 @@ public class BasicController extends BaseController {
             status = Integer.parseInt(statusStr);
         }
         String yield = req.getParameter("yield");
-        yield = yield + "%";
         String reviewPerson = req.getParameter("reviewPerson");
         String cycle = req.getParameter("cycle");
         String managementRate = req.getParameter("managementRate");
-        managementRate = managementRate + "%";
         String subscriptionRate = req.getParameter("subscriptionRate");
-        subscriptionRate = subscriptionRate + "%";
         String amountStr = req.getParameter("amount");
         BigDecimal amount = new BigDecimal(amountStr);
         if (amountStr != null && !"".equals(amountStr)) {
@@ -208,13 +205,10 @@ public class BasicController extends BaseController {
             status = Integer.parseInt(statusStr);
         }
         String yield = req.getParameter("yield");
-        yield = yield + "%";
         String reviewPerson = req.getParameter("reviewPerson");
         String cycle = req.getParameter("cycle");
         String managementRate = req.getParameter("managementRate");
-        managementRate = managementRate + "%";
         String subscriptionRate = req.getParameter("subscriptionRate");
-        subscriptionRate = subscriptionRate + "%";
         String amountStr = req.getParameter("amount");
         BigDecimal amount = new BigDecimal(amountStr);
         if (amountStr != null && !"".equals(amountStr)) {
